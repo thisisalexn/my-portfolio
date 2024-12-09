@@ -1,33 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useRef } from 'react';
+import ProfileInfo from './components/ProfileInfo'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const appRef = useRef(null);
+  const toRef = useRef(null);
+
+
+  const moveGradient = (event) => {
+    const winWidth = window.innerWidth;
+    const winHeight = window.innerHeight;
+
+    const mouseX = Math.round((event.pageX / winWidth) * 100);
+    const mouseY = Math.round((event.pageY / winHeight) * 100);
+
+    if (appRef) {
+      appRef.current.style.setProperty("--mouse-x", `${mouseX}%`);
+      appRef.current.style.setProperty("--mouse-y", `${mouseY}%`);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousemove", moveGradient);
+    return () => {
+      document.removeEventListener("mousemove", moveGradient);
+    };
+  }, []);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div id="app" ref={appRef} className='app'>
+        <div className='flex items-center justify-center h-screen w-screen'>
+          <ProfileInfo />
+        </div >
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
