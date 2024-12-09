@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 import ProfileInfo from './components/ProfileInfo'
+import Skills from './components/Skills';
+import SoftwareExperience from "./components/SoftwareExperience";
 
 function App() {
 
@@ -11,8 +13,12 @@ function App() {
     const winWidth = window.innerWidth;
     const winHeight = window.innerHeight;
 
-    const mouseX = Math.round((event.pageX / winWidth) * 100);
-    const mouseY = Math.round((event.pageY / winHeight) * 100);
+    const mouseX = event?.clientX
+      ? Math.round((event.clientX / winWidth) * 100)
+      : 50;
+    const mouseY = event?.clientY
+      ? Math.round((event.clientY / winHeight) * 100)
+      : 50;
 
     if (appRef) {
       appRef.current.style.setProperty("--mouse-x", `${mouseX}%`);
@@ -21,6 +27,8 @@ function App() {
   };
 
   useEffect(() => {
+    moveGradient();
+
     document.addEventListener("mousemove", moveGradient);
     return () => {
       document.removeEventListener("mousemove", moveGradient);
@@ -29,11 +37,24 @@ function App() {
 
   return (
     <>
-      <div id="app" ref={appRef} className='app'>
-        <div className='flex items-center justify-center h-screen w-screen'>
+      <div id="app"
+        ref={appRef}
+        className="app"
+      >
+        <div className="space-y-5" style={{
+          minHeight: '100vh',
+          overflow: 'auto',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+          padding: 100,
+        }}>
           <ProfileInfo />
-        </div >
-      </div>
+          <Skills />
+          <SoftwareExperience />
+        </div>
+      </div >
     </>
   )
 }

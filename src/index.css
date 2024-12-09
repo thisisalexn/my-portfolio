@@ -9,7 +9,12 @@
     filter: contrast(130%) brightness(150%);
     background:
         radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(7, 7, 78, 0.77), rgba(0, 0, 0, 1)),
-        url("src/assets/grain.svg");
+        url("/grain.svg");
+    background-attachment: fixed;
+    /* Make the background static */
+    background-size: cover;
+    /* Ensure the background image covers the entire viewport */
+    background-repeat: no-repeat;
 }
 
 .image {
@@ -21,4 +26,15 @@
     padding: 0 !important;
     padding-left: 0;
     padding-right: 0;
+}
+
+body,
+html {
+    overflow: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
