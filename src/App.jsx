@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import ProfileInfo from './components/ProfileInfo'
 import Skills from './components/Skills';
 import SoftwareExperience from "./components/SoftwareExperience";
+import { PersonalFooter } from './components/PersonalFooter';
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
           <ProfileInfo />
           <Skills />
           <SoftwareExperience />
+          <PersonalFooter />
         </div>
       </div >
     </>
