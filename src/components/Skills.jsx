@@ -2,6 +2,7 @@ import React from 'react';
 import Marquee from './basic/Marquee';
 import { FaGitAlt, FaReact, FaJava, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { FaUnity } from "react-icons/fa6";
+import { SiHaskell } from "react-icons/si";
 import IconText from './basic/IconText';
 
 const skills = [
@@ -13,7 +14,8 @@ const skills = [
     <div className="group flex flex-row items-center space-x-2 hover:scale-110">
         <p className='font-bold hover:text-orange-500'>C#</p>
     </div>,
-    <IconText icon={FaGitAlt} text={"git"} />
+    <IconText icon={FaGitAlt} text={"git"} />,
+    <IconText icon={SiHaskell} text="Haskell" />
 ]
 
 const Skills = () => {

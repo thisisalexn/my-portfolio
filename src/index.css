@@ -17,8 +17,13 @@
     background-repeat: no-repeat;
 }
 
-.image {
-    filter: contrast(100%) brightness(100%);
+
+
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+    filter: contrast(70%) brightness(70%);
 }
 
 .custom-dropdown-label>span {

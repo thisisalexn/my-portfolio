@@ -17,7 +17,7 @@ const software = [
     <IconText text="VS Code" icon={VscVscodeInsiders} />,
 ]
 
-const Skills = () => {
+const SoftwareExperience = () => {
     return (
         <>
             <div className="content-center flex-col w-96 p-4 ">
@@ -28,4 +28,4 @@ const Skills = () => {
     );
 };
 
-export default Skills;
+export default SoftwareExperience;

@@ -8,7 +8,7 @@ function ProfileInfo() {
         <>
             <div className="">
                 <Card className="bg-transparent content-center flex-col  items-center justify-center w-96">
-                    <Avatar img={'/public/IMG_5973.png'} rounded className="image" size="xl" placeholderInitials="AN" />
+                    <Avatar img={'/public/images/RandomPicFromHackathon.jpg'} rounded className="image" size="xl" placeholderInitials="AN" />
                     <h1 className="text-5xl font-bold tracking-tight text-white">
                         Alexander Nuss
                     </h1>
