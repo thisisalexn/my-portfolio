@@ -4,13 +4,13 @@ import DriveRightAppIcon from "./DriveRightAppIcon";
 
 const images = [
     "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c0/7e/00/c07e00f9-7439-d8da-7974-b8f82df59c98/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/540x540bb.jpg",
-    "public/images/driveright/PreviewMainMenu.png",
-    "public/images/driveright/PreviewGarage.png",
-    "public/images/driveright/PreviewSpeedLimit.png",
-    "public/images/driveright/PreviewSpeedCamera.png",
-    "public/images/driveright/PreviewViolation.png",
-    "public/images/driveright/PreviewArcadeMode.png",
-    "public/images/driveright/PreviewMissions.png",
+    "/images/driveright/PreviewMainMenu.png",
+    "/images/driveright/PreviewGarage.png",
+    "/images/driveright/PreviewSpeedLimit.png",
+    "/images/driveright/PreviewSpeedCamera.png",
+    "/images/driveright/PreviewViolation.png",
+    "/images/driveright/PreviewArcadeMode.png",
+    "/images/driveright/PreviewMissions.png",
 ];
 
 const DriveRight = () => {
