@@ -8,7 +8,7 @@ const Education = () => {
             <div className="content-center flex-col w-96 p-4 ">
                 <h2 className='text-3xl font-extrabold text-white'>Education</h2>
             </div>
-            <div className="content-center flex-col w-3/4 p-4 ">
+            <div className="content-center flex-col w-3/4 p-4 min-w-96">
 
                 <Timeline>
                     <Timeline.Item>

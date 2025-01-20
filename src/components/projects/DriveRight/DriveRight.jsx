@@ -18,7 +18,7 @@ const DriveRight = () => {
 
     return (
         <>
-            <div className="flex content-center flex-col w-3/4 p-4 space-y-4">
+            <div className="flex content-center flex-col w-3/4 min-w-96 p-4 space-y-4">
                 <h2 className='text-2xl font-extrabold text-white'>Drive Right <DriveRightAppIcon /> </h2>
 
 

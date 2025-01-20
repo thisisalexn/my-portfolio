@@ -18,12 +18,14 @@ const ImageGallery = ({ images }) => {
                     <img
                         key={index}
                         src={src}
+                        loading="lazy"
                         alt={`Gallery Image ${index + 1}`}
                         className="inline-block h-56 rounded-lg shadow-lg object-cover"
                         onContextMenu={handleRightClick}
                         style={{
                             userDrag: 'none',
                             pointerEvents: 'none'
+
                         }}
                     />
                 ))}
