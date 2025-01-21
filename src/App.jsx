@@ -47,14 +47,14 @@ function App() {
         className="app"
       >
         <div id="content"
-          className="space-y-5" style={{
+          className="space-y-5 " style={{
             minHeight: '100vh',
             overflow: 'auto',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'flex-start',
-            padding: 100,
+            paddingTop: 100,
           }}>
           <ProfileInfo />
           <Skills />
